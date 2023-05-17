@@ -1,0 +1,12 @@
+.table {
+  height: 100vh;
+  display: flex;
+  &__wrapper {
+    display: flex;
+    gap: 30px;
+    flex-wrap: wrap;
+    margin: 30px;
+    flex: 1 1 auto;
+    justify-content: center;
+  }
+}

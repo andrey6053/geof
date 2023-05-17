@@ -1,0 +1,22 @@
+.item {
+  width: 150px;
+  height: 100px;
+  background-color: grey;
+  border-radius: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex: 0 0 auto;
+  padding: 5px;
+  &__title {
+    color: white;
+    font-size: 1rem;
+    max-width: 100%;
+    text-align: center;
+  }
+  p {
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+  }
+}
