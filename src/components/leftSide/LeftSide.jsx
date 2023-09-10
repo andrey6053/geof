@@ -1,11 +1,10 @@
 import React, { useState } from "react";
 import "./leftSide.scss";
-import { useDispatch, useSelector } from "react-redux";
+import { useDispatch } from "react-redux";
 import { fetchData, searchData } from "../../store/reducers/dataSlice";
 
-export default function LeftSide() {
+export default function LeftSide({ limit }) {
   const dispatch = useDispatch();
-  const limit = useSelector((state) => state.data.limit);
   const [value, setValue] = useState("");
   const [searchTimeout, setSearchTimeout] = useState(false);
   const search = (event) => {
@@ -29,13 +28,7 @@ export default function LeftSide() {
   };
   return (
     <div className="left-side">
-      <input
-        type="text"
-        className="inp"
-        placeholder="Введите название"
-        value={value}
-        onChange={search}
-      />
+      <input type="text" className="inp" placeholder="Введите название" value={value} onChange={search} />
     </div>
   );
 }

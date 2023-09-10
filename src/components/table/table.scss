@@ -1,11 +1,13 @@
 .table {
-  height: 100vh;
-  display: flex;
+  min-height: calc(100vh - 150px);
+  max-height: calc(100vh - 150px);
+  display: grid;
+  grid-template-columns: 250px auto 200px;
   &__wrapper {
     display: flex;
     gap: 30px;
     flex-wrap: wrap;
-    margin: 30px;
+    margin: 15px;
     flex: 1 1 auto;
     justify-content: center;
   }
